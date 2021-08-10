@@ -1,7 +1,7 @@
 --[[
 -- plugin name will be used to reload the loaded modules
 --]]
-local package_name = 'greetings'
+local package_name = 'tools'
 
 local escape_pattern = function (text)
     return text:gsub("([^%w])", "%%%1")
@@ -20,7 +20,7 @@ end
 
 -- executes the run method in the package
 local run_action = function ()
-	require(package_name).window()
+	require(package_name).comma_count()
 end
 
 -- unload and run the function from the package
