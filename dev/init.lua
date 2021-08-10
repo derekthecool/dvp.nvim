@@ -3,7 +3,6 @@
 --]]
 local package_name = 'greetings'
 
--- add the escape character to special characters
 local escape_pattern = function (text)
     return text:gsub("([^%w])", "%%%1")
 end
@@ -21,7 +20,7 @@ end
 
 -- executes the run method in the package
 local run_action = function ()
-	require(package_name).greet()
+	require(package_name).window()
 end
 
 -- unload and run the function from the package
