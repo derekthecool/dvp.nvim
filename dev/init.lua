@@ -1,7 +1,7 @@
 --[[
 -- plugin name will be used to reload the loaded modules
 --]]
-local package_name = 'tools'
+local package_name = 'dvp'
 
 local escape_pattern = function (text)
     return text:gsub("([^%w])", "%%%1")
