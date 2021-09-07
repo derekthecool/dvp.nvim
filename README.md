@@ -5,10 +5,13 @@ I am using the neovim boilerplate starter from
 
 ## Implemented Functions
 
-
 | Function Name | Purpose                                         |
 |---------------|-------------------------------------------------|
 | comma_count   | Count the commas on a line and print the result |
+
+## Ideas For New Features
+
+* Virtual Text like this `:lua vim.api.nvim_buf_set_virtual_text(0, 51, 6, {{'🐄 '.."Derek is nice", 'Error'}},{})`
 
 ## neovim-lua-plugin-boilerplate
 
