@@ -5,13 +5,16 @@ I am using the neovim boilerplate starter from
 
 ## Implemented Functions
 
-| Function Name | Purpose                                         |
-|---------------|-------------------------------------------------|
-| comma_count   | Count the commas on a line and print the result |
+| Function Name | Purpose                                                              |
+|---------------|----------------------------------------------------------------------|
+| comma_count   | Count the commas on a line and print the result                      |
+| bit_flip      | Flip a binary bit with ease. Run command on a 0 or a 1 to invert it. |
 
 ## Ideas For New Features
 
 * Virtual Text like this `:lua vim.api.nvim_buf_set_virtual_text(0, 51, 6, {{'🐄 '.."Derek is nice", 'Error'}},{})`
+* Use virtual text to display decimal, hexadecimal, octal, and binary on the
+  side of the window.
 
 ## neovim-lua-plugin-boilerplate
 

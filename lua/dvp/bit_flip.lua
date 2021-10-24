@@ -1,5 +1,5 @@
 local function bit_flip()
-    local get_cursor_position = vim.api.nvim_win_get_cursor(1)
+    local get_cursor_position = vim.api.nvim_win_get_cursor(0)
     local cursor_column = get_cursor_position[2] + 1
     local line = vim.api.nvim_get_current_line()
     local char_under_cursor = line:sub(cursor_column, cursor_column)
