@@ -7,8 +7,8 @@ if exists("b:current_syntax")
   finish
 endif
 
-" Section custom to errlogpool.txt
-syntax match log_error 	'\(user.err\)'
+" Section custom to Micron Device Log files
+syntax match log_error 	'\[Warning:data or topic is empty;please check your report or data conversion\]'
 syntax match log_info 	'\(user\.info\|user\.notice\)'
 syntax match log_debug 	'\(user\.debug\)'
 syntax match log_daemon '\(daemon\.debug\|daemon\.info\)'
@@ -64,7 +64,7 @@ highlight   def   link   log_string       String
 highlight   def   link   log_number       Number
 highlight   def   link   log_date         Type
 highlight   def   link   log_time         Type
-highlight   def   link   log_error        ErrorMsg
+highlight   def   link   log_error        Error
 highlight   def   link   log_debug        Directory
 highlight   def   link   log_info         SpecialKey
 highlight   def   link   log_keywords     Directory
