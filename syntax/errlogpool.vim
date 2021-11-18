@@ -9,6 +9,7 @@ endif
 
 " Section custom to errlogpool.txt
 syntax match log_error 	'\(user.err\)'
+syntax match log_error 	'COMMAND_FAILURE.*freeus_fence.*'
 syntax match log_info 	'\(user\.info\|user\.notice\)'
 syntax match log_debug 	'\(user\.debug\)'
 syntax match log_daemon '\(daemon\.debug\|daemon\.info\)'
