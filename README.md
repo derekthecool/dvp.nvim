@@ -6,14 +6,14 @@ I am using the neovim boilerplate starter from
 ## Implemented Functions
 
 | Function Name | Purpose                                                              |
-|---------------|----------------------------------------------------------------------|
+| ------------- | -------------------------------------------------------------------- |
 | comma_count   | Count the commas on a line and print the result                      |
 | bit_flip      | Flip a binary bit with ease. Run command on a 0 or a 1 to invert it. |
 
 ## Ideas For New Features
 
-* Virtual Text like this `:lua vim.api.nvim_buf_set_virtual_text(0, 51, 6, {{'🐄 '.."Derek is nice", 'Error'}},{})`
-* Use virtual text to display decimal, hexadecimal, octal, and binary on the
+- Virtual Text like this `:lua vim.api.nvim_buf_set_virtual_text(0, 51, 6, {{'🐄 '.."Derek is nice", 'Error'}},{})`
+- Use virtual text to display decimal, hexadecimal, octal, and binary on the
   side of the window.
 
 ## neovim-lua-plugin-boilerplate
@@ -25,8 +25,8 @@ boilerplate to make it easier to get started writing `neovim` plugin.
 
 ### How to use
 
-* clone the project `git clone https://github.com/s1n7ax/neovim-lua-plugin-boilerplate`
-* go to the project folder `cd neovim-lua-plugin-boilerplate`
-* start editing `nvim --cmd "set rtp+=."`
-* reference the dev configurations `:luafile dev/init.lua`
-* run the greetings.greet() function using `,w` keybind
+- clone the project `git clone https://github.com/s1n7ax/neovim-lua-plugin-boilerplate`
+- go to the project folder `cd neovim-lua-plugin-boilerplate`
+- start editing `nvim --cmd "set rtp+=."`
+- reference the dev configurations `:luafile dev/init.lua`
+- run the greetings.greet() function using `,w` keybind

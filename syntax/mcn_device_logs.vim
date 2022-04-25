@@ -9,12 +9,16 @@ endif
 
 " Section custom to Micron Device Log files
 syntax match log_error '\[Warning:data or topic is empty;please check your report or data conversion\]'
-syntax match log_error '^ERROR'
-syntax match ATcommand '^\(AT\|at\)+.*'
-syntax match ATcommandOK '^OK'
-syntax match log_keywords '^+.*'
+syntax match log_error 'ERROR'
+syntax match log_error 'Error encoding.*'
+syntax match ATcommand '\(AT\|at\)+.*'
+syntax match ATcommandOK 'OK'
+syntax match log_keywords '+.*'
 syntax match log_keywords '+RESP.*'
-syntax region  debugInit start=/^+EIND: 128/ end=/^+TRDEBUG:ON/ skip=/\\./
+syntax match log_keywords 'FA:.*'
+syntax match log_keywords 'MTrecv:.*'
+syntax match log_keywords 'MTpub:.*'
+syntax region  debugInit start=/+EIND: 128/ end=/+TRDEBUG:ON/ skip=/\\./
 
 " Basic regex matches
 syntax region  log_string start=/'/ end=/'/ end=/$/ skip=/\\./
@@ -24,7 +28,7 @@ syntax match   log_date '\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov
 syntax match   log_date '\d\{4}-\d\d-\d\d'
 syntax match   log_time '\d\d:\d\d:\d\d\s*'
 syntax match   log_time '\c\d\d:\d\d:\d\d\(\.\d\+\)\=\([+-]\d\d:\d\d\|Z\)'
-syntax match   log_linenumber '^\d\+:'
+syntax match   log_linenumber '\d\+:'
 
 " Set the color patterns for each type, actual colors are taken from color scheme
 highlight   def   link   log_string       String
