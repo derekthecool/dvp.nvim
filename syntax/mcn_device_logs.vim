@@ -11,6 +11,7 @@ endif
 syntax match log_error '\[Warning:data or topic is empty;please check your report or data conversion\]'
 syntax match log_error 'ERROR'
 syntax match log_error 'Error encoding.*'
+syntax match log_error '\[ERR\]'
 syntax match ATcommand '\(AT\|at\)+.*'
 syntax match ATcommandOK 'OK'
 syntax match log_keywords '+.*'
@@ -21,14 +22,17 @@ syntax match log_keywords 'MTpub:.*'
 syntax region  debugInit start=/+EIND: 128/ end=/+TRDEBUG:ON/ skip=/\\./
 
 " Basic regex matches
+" Example log
+" 2022-07-15 10:30:30.585 -06:00 [DBG] ExtBootloader, fota udpate return 2
+" syntax match   log_linenumber '\d\+:'
 syntax region  log_string start=/'/ end=/'/ end=/$/ skip=/\\./
 syntax region  log_string start=/"/ end=/"/ skip=/\\./
 syntax match   log_number '0x[0-9a-fA-F]*\|\[<[0-9a-f]\+>\]\|\<\d[0-9a-fA-F]*'
 syntax match   log_date '\(Jan\|Feb\|Mar\|Apr\|May\|Jun\|Jul\|Aug\|Sep\|Oct\|Nov\|Dec\) [ 0-9]\d *'
 syntax match   log_date '\d\{4}-\d\d-\d\d'
-syntax match   log_time '\d\d:\d\d:\d\d\s*'
-syntax match   log_time '\c\d\d:\d\d:\d\d\(\.\d\+\)\=\([+-]\d\d:\d\d\|Z\)'
-syntax match   log_linenumber '\d\+:'
+syntax match   log_time '\d\d:\d\d:\d\d\.\d\{3}\s-\d\+:\d\+'
+" syntax match   log_time '\d\d:\d\d:\d\d\s*'
+" syntax match   log_time '\c\d\d:\d\d:\d\d\(\.\d\+\)\=\([+-]\d\d:\d\d\|Z\)'
 
 " Set the color patterns for each type, actual colors are taken from color scheme
 highlight   def   link   log_string       String
