@@ -1,6 +1,5 @@
 # Derek's nVim Plugin (DVP)
 
-
 I am using the neovim boilerplate starter from
 [s1n7ax](https://github.com/s1n7ax/neovim-lua-plugin-boilerplate).
 
