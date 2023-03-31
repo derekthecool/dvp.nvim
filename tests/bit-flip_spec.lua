@@ -1,4 +1,5 @@
-describe('bit_flip tests', function()
+-- The '--' in the test group name are required for my DIY plenary test automation
+describe('bit_flip tests --', function()
   it('Can be required', function()
     local require_test = require('dvp').bit_flip
   end)
